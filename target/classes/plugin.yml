@@ -1,0 +1,33 @@
+name: ItemToXP
+main: io.github.TweenyTodd.ItemToXP.ItemToXP
+version: 0.1
+commands:
+ itxp:
+  description: Default command of ItemToXP.
+  permission: itxp.help
+  usage: /itxp <args>
+permissions:
+ itxp.*:
+  description: Gives access to all of ItemToXP.
+  default: op
+  children:
+   itxp.help: true
+   itxp.create: true
+   itxp.use: true
+   itxp.reload: true
+ itxp.help:
+  description: Allows use of ItemToXP command.
+  default: false
+ itxp.create:
+  description: Allows creation of ItemToXP signs.
+  default: false
+  children:
+   itxp.help: true
+ itxp.use:
+  description: Allows usage of ItemToXP signs.
+  default: true
+ itxp.reload:
+  description: Allows reloading of ItemToXP.
+  default: false
+  children:
+   itxp.help: true
